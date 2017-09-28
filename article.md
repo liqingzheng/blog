@@ -183,6 +183,8 @@ SaveAs: function(fileName, csvData) {
 | Chrome | 8,182 | - |
 | Safari | 80,000 | - |
 | Opera | 190,000 | - |
+
+
 所以我们这里借助 Blob（[Blob传送门][2]）来将转换好的数据进行处理，代码如下：
 
 ```
