@@ -175,8 +175,9 @@ SaveAs: function(fileName, csvData) {
 ```
 虽然看起来是可以了，但还是有问题。什么问题呢？
 就是当数据量大的时候，比如几千条甚至几万条，在数据转换的时候，href的数值自然也就长了。若是超过浏览器自身限制的最大长度，会导致下载失败。具体每个浏览器之前URL最大长度限制如下（HTTP协议并没有限制URL的长度）：
+
 | 浏览器  | 最大长度（字符数）     | 备注  |
-| ---- |:------:| -----:|
+| ---- |:---------:| -----:|
 | IE | 2083 | 如果超过这个数字，提交按钮没有任何反应 |
 | Firefox | 65,536 | - |
 | Chrome | 8,182 | - |
@@ -201,7 +202,7 @@ getDownloadUrl: function(csvData) {
 这里涉及到的知识点：[encodeURIComponent][3]、[URL.createObjectURL][4]
 到这里，Chrome、Firefox等浏览器解决了。
 #### IE10~Edge浏览的下载方式
-IE10~Edge等浏览器调用`windows.navigator.msSaveBlob`实现保存文件，[msSaveBlob][5]是IE10~Edge的私有方法。
+IE10到Edge等浏览器调用`windows.navigator.msSaveBlob`实现保存文件，[msSaveBlob][5]是IE10~Edge的私有方法。
 所以`SaveAs`代码改写如下：
 
 ```
