@@ -31,10 +31,7 @@
 ]
 ```
 数据报告展示样式如下：
-| one | two   |
-|-----|-------|
-| a   | table |
-| is  | nice  |
+
 
 | 姓名  | 金额     | 占比  |
 | ---- |:------:| -----:|
@@ -136,7 +133,7 @@ JSonToCSV.setDataConver({
 });
 ```
 到此，数据转换完毕
-###下载方式
+### 下载方式
 由于浏览器之间的差异，尤其是IE，所以不同的浏览器下载的方式也不一样，如Chrome和Firefox都支持`a`标签设置download属性和href值，然后调用`a`的`click`方法即可下载，IE既不支持`a`download属性也不允许调用`a`的`click`方法。代码如下：
 
 ```
@@ -203,7 +200,7 @@ getDownloadUrl: function(csvData) {
 这样不管几万条还是几十万条数据都可以下载的
 这里涉及到的知识点：[encodeURIComponent][3]、[URL.createObjectURL][4]
 到这里，Chrome、Firefox等浏览器解决了。
-####IE10~Edge浏览的下载方式
+#### IE10~Edge浏览的下载方式
 IE10~Edge等浏览器调用`windows.navigator.msSaveBlob`实现保存文件，[msSaveBlob][5]是IE10~Edge的私有方法。
 所以`SaveAs`代码改写如下：
 
