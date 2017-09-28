@@ -261,7 +261,7 @@ SaveAs: function(fileName, csvData) {
     }
   }
 ```
-所以最终代码整体如下：
+所以最终代码整体如下（也可以访问我的[GitHub][7]下载最新的js文件）：
 
 ```
 var JSonToCSV = {
